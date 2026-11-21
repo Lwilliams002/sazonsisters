@@ -19,7 +19,7 @@ Until then, the form tells visitors to call the truck.
 
 ## Test
 ```bash
-node --test tests/
+node --test tests/*.test.js
 ```
 
 ## Put it online (free)
