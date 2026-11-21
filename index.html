@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sazón Sisters | Cuban &amp; Vegan Food Truck in Medley, FL</title>
+  <meta name="description" content="Authentic Cuban and vegan food truck in Medley, FL. Order pickup online, see today's hours, or book us for catering. Cuban flavor, vegan love, made fresh.">
+  <meta property="og:title" content="Sazón Sisters | Cuban &amp; Vegan Food Truck">
+  <meta property="og:description" content="Cuban flavor, vegan love, made fresh. Order pickup, find the truck, book catering.">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:image" content="assets/logo.webp">
+  <link rel="icon" href="assets/logo.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FoodEstablishment",
+    "name": "Sazón Sisters",
+    "servesCuisine": ["Cuban", "Vegan"],
+    "telephone": "+1-305-833-4872",
+    "image": "assets/logo.webp",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "7300 NW 84th Ave",
+      "addressLocality": "Medley",
+      "addressRegion": "FL",
+      "postalCode": "33166",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"], "opens": "17:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "17:00", "closes": "23:59" }
+    ],
+    "sameAs": ["https://www.instagram.com/sazonsistersfoodtruck/"]
+  }
+  </script>
+</head>
+<body>
+  <div id="today-note" class="today-note" hidden></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Sazón Sisters home">
+      <img src="assets/logo.webp" alt="" width="44" height="44">
+      <span>Sazón Sisters</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#menu">Menu</a>
+      <a href="#catering">Catering</a>
+      <a href="#find-us">Find Us</a>
+    </nav>
+    <a class="btn btn-pink btn-sm js-order" target="_blank" rel="noopener" href="#">Order Pickup</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img class="hero-logo" src="assets/logo.webp" alt="Sazón Sisters: two chefs, a palm tree, and the words Cuban flavor, vegan love, made fresh" width="320" height="320">
+      <div class="hero-copy">
+        <p class="tagline" id="tagline"></p>
+        <p id="status-badge" class="status" aria-live="polite">Checking hours…</p>
+        <p class="today-hours">Today: <strong id="today-hours">&nbsp;</strong></p>
+        <p class="address" id="hero-address"></p>
+        <div class="cta-row">
+          <a class="btn btn-pink js-order" target="_blank" rel="noopener" href="#">Order Pickup</a>
+          <a class="btn btn-yellow" id="directions-btn" target="_blank" rel="noopener" href="#">Get Directions</a>
+          <a class="btn btn-teal" id="call-btn" href="#">Call Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="promo" class="promo" hidden>
+      <div class="promo-inner">
+        <div>
+          <p class="promo-kicker">Special offer</p>
+          <h2 id="promo-title"></h2>
+          <p id="promo-text"></p>
+          <p class="promo-note" id="promo-note"></p>
+        </div>
+        <div class="promo-code">
+          <span>Promo code</span>
+          <button type="button" id="promo-code-btn" aria-label="Copy promo code"></button>
+          <small id="promo-copied" aria-live="polite"></small>
+        </div>
+      </div>
+    </section>
+
+    <section id="find-us" class="section">
+      <h2>Find Us</h2>
+      <div class="find-grid">
+        <div class="card">
+          <h3>Where</h3>
+          <p id="find-address"></p>
+          <p class="muted" id="find-note"></p>
+          <a class="btn btn-yellow btn-sm" id="directions-btn-2" target="_blank" rel="noopener" href="#">Get Directions</a>
+          <h3>Hours</h3>
+          <table id="hours-table" class="hours-table"><tbody></tbody></table>
+          <p class="muted">Times shown are Miami time.</p>
+        </div>
+        <div class="map">
+          <iframe title="Map to Sazón Sisters" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=7300+NW+84th+Ave+Medley+FL+33166&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="section">
+      <h2>Menu</h2>
+      <p class="muted menu-note">Prices and availability may vary, so check Toast for live stock. <span class="vegan-tag">V</span> means vegan.</p>
+      <div id="menu-tabs" class="tabs" role="tablist" aria-label="Menu categories"></div>
+      <div id="menu-items" class="menu-grid" role="tabpanel"></div>
+      <p class="center"><a class="btn btn-pink js-order" target="_blank" rel="noopener" href="#">Order Pickup on Toast</a></p>
+    </section>
+
+    <section id="catering" class="section catering">
+      <h2>Catering</h2>
+      <p class="lead">We're family serving family. Bring our authentic Cuban favorites and vegan creations to your party, office lunch or event. Tell us about it and we'll get back to you.</p>
+      <form id="catering-form" class="card form" novalidate>
+        <label>Name <input name="name" autocomplete="name" required></label>
+        <label>Phone <input name="phone" type="tel" autocomplete="tel" required></label>
+        <label>Email <input name="email" type="email" autocomplete="email"></label>
+        <label>Event date <input name="date" type="date" required></label>
+        <label>Number of guests <input name="headcount" type="number" min="1" inputmode="numeric" required></label>
+        <label class="full">Tell us about your event <textarea name="notes" rows="4"></textarea></label>
+        <button class="btn btn-pink full" type="submit">Send Catering Request</button>
+        <p id="form-status" class="full form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img src="assets/logo.webp" alt="" width="72" height="72">
+    <p><strong>Sazón Sisters</strong> · Cuban &amp; Vegan Food Truck</p>
+    <p id="footer-address"></p>
+    <p><a id="footer-phone" href="#"></a> · <a id="footer-ig" target="_blank" rel="noopener" href="#">Instagram</a></p>
+    <p class="muted">© <span id="year"></span> Sazón Sisters</p>
+  </footer>
+
+  <script src="data/site.js"></script>
+  <script src="data/menu.js"></script>
+  <script src="js/hours.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/catering.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
